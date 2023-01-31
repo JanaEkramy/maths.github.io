@@ -1,4 +1,4 @@
-<!--# maths.github.io-->
+
 <!DOCTYPE html>
 <head>
     <title>calc test</title>
