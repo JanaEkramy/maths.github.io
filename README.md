@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+
 <head>
     <title>calc test</title>
 </head>
@@ -27,7 +27,7 @@
     <button id="btn10" onclick="linearCombination()">اضغط هنا</button>
 
 
-    </br>
+    
     <div id="box"> 
         <p id="txt">ستظهر الاجابة هنا</p>
         <p id="space"></p>
@@ -68,7 +68,7 @@
             var x2=parseInt(prompt('ادخل x2'));
             var y1=parseInt(prompt('ادخل y1'));
             var y2=parseInt(prompt('ادخل y2'));
-            var res=((x2-x1)+','+(y2-y1));
+            var res=('('+(x2-x1)+','+(y2-y1)+')');
             var space = document.getElementById('space');
             space.innerHTML=res;
         }
@@ -124,7 +124,7 @@
             var theta=parseInt(prompt('ادخل theta'));
             var x= r*(Math.cos(degrees_to_radians(theta)));
             var y= r*(Math.sin(degrees_to_radians(theta)));
-            var res= (x+','+y)
+            var res= ('('+x+','+y+')')
             var space = document.getElementById('space');
             space.innerHTML=res;
         }
@@ -191,7 +191,7 @@
 
 <style>
     #box{
-        height: 80px;
+        height: 120px;
         width: 300px;
         background: coral;
     }
