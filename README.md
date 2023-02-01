@@ -13,8 +13,8 @@
     <button id="btn3" onclick="lengthoOfUnitVectorXY()">اضغط هنا</button>
     <p>ايجاد الصورة الاحداثية لمتجه</p>
     <button id="btn4" onclick="componentForm()">اضغط هنا</button>
-    <p>ايجادالصورة القطبية للعدد المركب</p>
-    <button id="btn5" onclick="polarFormOfComplexNumber()">اضغط هنا</button> <!--function not completed-->
+    <!--<p>ايجادالصورة القطبية للعدد المركب</p>-->
+    <!--<button id="btn5" onclick="polarFormOfComplexNumber()">اضغط هنا</button>--> <!--function not completed-->
     <p>ايجاد القيمة المطلقة للعدد المركب</p>
     <button id="btn6" onclick="absComplexNumber()">اضغط هنا</button>
     <p>التحويل من احداثيات قطبية الى ديكارتية</p>
@@ -25,6 +25,8 @@
     <button id="btn9" onclick="averageContrastStandardDeviation()">اضغط هنا</button>
     <p>كتابة متجه على صورة توافق خطي لمتجه الوحدة</p>
     <button id="btn10" onclick="linearCombination()">اضغط هنا</button>
+    <p>ايجاد زوايا الاتجاه للمتجهات</p>
+    <button id="btn11" onclick="directionAngle()">اضغط هنا</button>
 
 
     
@@ -181,6 +183,20 @@
         var y1=parseInt(prompt('ادخل y1'));
         var y2=parseInt(prompt('ادخل y2'));
         var res= ('('+(x2-x1)+'i'+'+'+(y2-y1)+'j)')
+        var space = document.getElementById('space');
+        space.innerHTML= res ;
+    }
+    
+    function directionAngle(){
+        var a = parseInt(prompt('ادخل a'));
+        var b = parseInt(prompt('ادخل b'));
+        var num=Math.atan((b/a));
+        function radians_to_degrees(radians)
+            {
+            var pi = Math.PI;
+            return radians * (180/pi);
+            }
+        var res = radians_to_degrees(num);    
         var space = document.getElementById('space');
         space.innerHTML= res ;
     }
